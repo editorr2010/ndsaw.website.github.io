@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDSAW - Resources & Downloads</title>
+      <link rel="icon" type="image/png" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSgBBwcHCggKEwoKEygaFhooKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKP/AABEIABQAFAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APX/AB38Rx4X1QQXNsXtnk8tHWHzOdiN83zr138DnoayrVlRtfqejl+WVMfz+zkly23MDWfjBc6fPbxTaVcRyz8Rb7E/Pzj5f3oJ59Kxli1HdM9Clw9VqpyjUjpvq/8AI9R8Pas19olndXmxJ5Y9zBAQuckcZ+ldZ88eP/GHVYNK8RGTUba8NmzlpXtxkIDFEq7x/dLKRkhl+U/Kxxjro01Ujyu3zMZVZUpqcW0+6OX1y/ltxF5tqXu5pWCw2qDfnapfdhiFGCpOWZeTmNeRVU8PTg3KKt5/1/XmXWxuIqxUJybXb/O36nv3guSRfCmmbYiwMW4HOOCSR+mDXEWXfEOlWWqWTJewLIVzsboyE8Eg9uOCOhHByOKcZOOwmk9zi/AWi2E819LPbpIYL+WBVYZVim0CQjoWOFP90FQQBWlWTdiIJanpIAAwKyND/9k=">
+    
+    
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #002244, #cc0000);
+            color: #fff;
+            border-bottom: 3px solid #004488;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        /* Content */
+        .content {
+            max-width: 900px;
+            margin: 20px auto;
+            background: #002244;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .content h1 {
+            text-align: center;
+            font-size: 2rem;
+            color: #fff;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        .description {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+        }
+
+        /* Resource List */
+        .resource-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .resource-item {
+            background: #004488;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
+
+        .download-button {
+            background: #ffcc00;
+            color: #002244;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .download-button:hover {
+            background: #cc0000;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="ndsaw-logo.jpg" alt="NDSAW Logo">
+        <div class="logo-text">NDSAW</div>
+    </div>
+</header>
+
+<div class="content">
+    <h1>Resources & Downloads</h1>
+    <p class="description">
+        Access important guides, toolkits, reports, and other materials related to NDSAW's mission.
+    </p>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" onkeyup="searchResources()" placeholder="Search for resources...">
+    </div>
+
+    <!-- Resources List -->
+    <ul class="resource-list" id="resourceList">
+        <li class="resource-item">
+            <span>Cyber Safety Guide</span>
+            <a href="https://example.com/cyber-safety-guide.pdf" class="download-button" target="_blank">Download</a>
+        </li>
+        <li class="resource-item">
+            <span>Online Privacy Toolkit</span>
+            <a href="https://example.com/online-privacy-toolkit.pdf" class="download-button" target="_blank">Download</a>
+        </li>
+        <li class="resource-item">
+            <span>Internet Security Checklist</span>
+            <a href="https://example.com/internet-security-checklist.pdf" class="download-button" target="_blank">Download</a>
+        </li>
+        <li class="resource-item">
+            <span>Parental Control Guide</span>
+            <a href="https://example.com/parental-control-guide.pdf" class="download-button" target="_blank">Download</a>
+        </li>
+    </ul>
+</div>
+
+<footer>
+    <p>© 2024 NDSAW. All Rights Reserved.</p>
+</footer>
+
+<!-- JavaScript for Search Function -->
+<script>
+    function searchResources() {
+        let input = document.getElementById('searchInput').value.toLowerCase();
+        let items = document.getElementById('resourceList').getElementsByTagName('li');
+
+        for (let i = 0; i < items.length; i++) {
+            let text = items[i].innerText.toLowerCase();
+            if (text.includes(input)) {
+                items[i].style.display = "";
+            } else {
+                items[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+<!-- Obfuscated JS -->
+<script src="obfuscated.js"></script>
+
+</body>
+</html>

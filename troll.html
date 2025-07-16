@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Detected! 🚨</title>
+  <link rel="icon" type="image/png" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSgBBwcHCggKEwoKEygaFhooKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKP/AABEIABQAFAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APX/AB38Rx4X1QQXNsXtnk8tHWHzOdiN83zr138DnoayrVlRtfqejl+WVMfz+zkly23MDWfjBc6fPbxTaVcRyz8Rb7E/Pzj5f3oJ59Kxli1HdM9Clw9VqpyjUjpvq/8AI9R8Pas19olndXmxJ5Y9zBAQuckcZ+ldZ88eP/GHVYNK8RGTUba8NmzlpXtxkIDFEq7x/dLKRkhl+U/Kxxjro01Ujyu3zMZVZUpqcW0+6OX1y/ltxF5tqXu5pWCw2qDfnapfdhiFGCpOWZeTmNeRVU8PTg3KKt5/1/XmXWxuIqxUJybXb/O36nv3guSRfCmmbYiwMW4HOOCSR+mDXEWXfEOlWWqWTJewLIVzsboyE8Eg9uOCOhHByOKcZOOwmk9zi/AWi2E819LPbpIYL+WBVYZVim0CQjoWOFP90FQQBWlWTdiIJanpIAAwKyND/9k=">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: black;
+            color: #ff4444;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        .troll-message {
+            font-size: 1.2em;
+            margin: 10px;
+        }
+        .middle-finger {
+            font-size: 10em;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🚨 ALERT: Pathetic Hacker Detected! 🚨</h1>
+    <p>Oh no! Looks like we have a script kiddie here. 😆</p>
+
+    <p class="troll-message">Attempting to hack NDSAW? That's cute. 🤡</p>
+    <p class="troll-message">You must have learned hacking from a YouTube tutorial, huh? 😂</p>
+    <p class="troll-message">Meanwhile, our real security team is watching you fail. 🍿</p>
+
+    <div class="middle-finger">🖕</div>
+
+    <script>
+        function playSound() {
+            let audio = new Audio("https://www.myinstants.com/media/sounds/windows-xp-error.mp3");
+            audio.play();
+        }
+
+        playSound();
+
+        setTimeout(() => {
+            window.location.href = "https://youtu.be/xvFZjo5PgG0?si=XtBFm71eZC_1Sjbx";
+        }, 3000); // Redirect after 3 seconds
+    </script>
+<script>
+    function detectHackAttempt(event) {
+        if (
+            event.key === "F12" || 
+            (event.ctrlKey && event.shiftKey && event.key === "I") || 
+            (event.ctrlKey && event.shiftKey && event.key === "J") || 
+            (event.ctrlKey && event.key === "U") || 
+            (event.ctrlKey && event.key === "S") 
+        ) {
+            event.preventDefault(); // Stop shortcut
+            window.location.href = "troll.html"; // Redirect to troll page
+        }
+    }
+
+    // Listen for keypresses
+    window.addEventListener("keydown", detectHackAttempt);
+
+    // 🛑 Fully Disable Right-Click
+    document.addEventListener("contextmenu", event => event.preventDefault());
+
+    // 🛑 Block Page Saving (Ctrl+S & Save As)
+    document.addEventListener("keydown", function(event) {
+        if (event.ctrlKey && event.key === "s") {
+            event.preventDefault();
+            alert("🚫 Saving is blocked!");
+        }
+    });
+
+    // 🛑 Advanced: Block Printing (Ctrl+P)
+    document.addEventListener("keydown", function(event) {
+        if (event.ctrlKey && event.key === "p") {
+            event.preventDefault();
+            alert("🚫 Printing is blocked!");
+        }
+    });
+
+    // 🛑 Extra: Anti-DevTools Trick (Detect Open Console)
+    setInterval(() => {
+        if (window.outerHeight - window.innerHeight > 200 || window.outerWidth - window.innerWidth > 200) {
+            window.location.href = "troll.html"; // Redirect if DevTools is opened
+        }
+    }, 1000);
+</script>
+</body>
+</html>
