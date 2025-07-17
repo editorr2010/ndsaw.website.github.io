@@ -134,7 +134,7 @@
 <!-- Incident Report Form -->
 <div class="container">
     <h2>Report an Incident</h2>
-    <p>Please fill out the form below to report an incident.</p>
+    <p>Please fill out the form below to report an incident. ⚠️ After pressing SUBMIT, WAIT for a few seconds until a "SUCCESSFULLY SUBMITED" message shows up. DO NOT CLOSE BEFORE THE MEASSAGE SHOWS! ⚠️</p>
 
     <form id="incidentForm">
         <label for="name">Your Name:</label>
@@ -151,23 +151,23 @@
 
         <label>Upload Evidence:</label>
         <div class="upload-box" onclick="document.getElementById('fileUpload').click();">
-            Click to Upload File
+            Click to Upload Image/Video
         </div>
         <input type="file" id="fileUpload" accept="image/*,video/*" style="display: none;">
-        <p id="fileName" class="file-name">No file uploaded</p>
+        <p id="fileName" class="file-name">No image/video uploaded</p>
         <input type="hidden" id="fileUrl" name="file_url" value="">
 
         <button type="submit">Submit Report</button>
 
         <!-- WhatsApp Button -->
-        <a href="https://wa.me/7044705534" class="whatsapp-btn" target="_blank">Chat on WhatsApp</a>
+        
     </form>
 </div>
 
 <script>
     // Initialize EmailJS
     (function() {
-        emailjs.init({ publicKey: "4HZRKZ6DvndLv7byJ" });
+        emailjs.init({ publicKey: "z2PezI8n7ZU_o2Mn_" });
     })();
 
     document.getElementById("fileUpload").addEventListener("change", function() {
@@ -218,7 +218,7 @@
             file_url: document.getElementById("fileUrl").value || "No file uploaded"
         };
 
-        emailjs.send("service_s80ihcd", "template_wav8q5u", templateParams, "4HZRKZ6DvndLv7byJ")
+        emailjs.send("service_vuhab9s", "template_dbydkiy", templateParams, "z2PezI8n7ZU_o2Mn_")
         .then(response => {
             alert("Incident Report Submitted!");
             document.getElementById("incidentForm").reset();
