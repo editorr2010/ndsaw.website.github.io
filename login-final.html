@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NDSAW Officer Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="image/png" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSgBBwcHCggKEwoKEygaFhooKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKP/AABEIABQAFAMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APX/AB38Rx4X1QQXNsXtnk8tHWHzOdiN83zr138DnoayrVlRtfqejl+WVMfz+zkly23MDWfjBc6fPbxTaVcRyz8Rb7E/Pzj5f3oJ59Kxli1HdM9Clw9VqpyjUjpvq/8AI9R8Pas19olndXmxJ5Y9zBAQuckcZ+ldZ88eP/GHVYNK8RGTUba8NmzlpXtxkIDFEq7x/dLKRkhl+U/Kxxjro01Ujyu3zMZVZUpqcW0+6OX1y/ltxF5tqXu5pWCw2qDfnapfdhiFGCpOWZeTmNeRVU8PTg3KKt5/1/XmXWxuIqxUJybXb/O36nv3guSRfCmmbYiwMW4HOOCSR+mDXEWXfEOlWWqWTJewLIVzsboyE8Eg9uOCOhHByOKcZOOwmk9zi/AWi2E819LPbpIYL+WBVYZVim0CQjoWOFP90FQQBWlWTdiIJanpIAAwKyND/9k=">
+   
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f5fa;
+      color: #002855;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      background-color: #002855;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+    }
+
+    header img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .login-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .login-box {
+      background: white;
+      padding: 2rem 3rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      color: #002855;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.9rem;
+      background-color: #002855;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004080;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      display: none;
+    }
+
+    @media(max-width: 500px) {
+      .login-box {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="NDSAW Logo">
+    <h1>NDSAW</h1>
+  </header>
+
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Officer Login</h2>
+      <div class="error" id="errorBox">Invalid credentials. Please try again.</div>
+      <input type="text" id="codename" placeholder="Codename" required />
+      <input type="text" id="id" placeholder="ID Number" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button onclick="login()">Login</button>
+    </div>
+  </div>
+
+  <script>
+    const officers = [
+      { codename: "shadow", id: "70186424WBNDSAW", password: "70186424@", page: "main-s.html" },
+      { codename: "overwatch", id: "93412896WBNDSAW", password: "93412896@", page: "main-o.html" },
+      { codename: "specter", id: "87463975WBNDSAW", password: "87463975@", page: "main-sp.html" },
+      { codename: "phoenix", id: "81297535WBNDSAW", password: "81297535@", page: "main-p.html" },
+      { codename: "viper", id: "92309747WBNDSAW", password: "92309747@", page: "main.html" },
+      { codename: "tigress", id: "94640125WBNDS", password: "94640125@", page: "main-t.html" },
+      { codename: "midnightfox", id: "157512305WBNDSAW", password: "157512305@", page: "main-m.html" },
+      { codename: "anonymous", id: "93645912WBNDSAW", password: "93645912@", page: "main-a.html" },
+      { codename: "phantomvixen", id: "80649235WBNDSAW", password: "80649235@", page: "main-v.html" },
+      { codename: "", id: "", password: "", page: "" },
+      // Add more officers as needed
+    ];
+
+    function login() {
+      const codename = document.getElementById("codename").value.trim();
+      const id = document.getElementById("id").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const errorBox = document.getElementById("errorBox");
+
+      const match = officers.find(o => 
+        o.codename.toLowerCase() === codename.toLowerCase() &&
+        o.id === id && o.password === password
+      );
+
+      if (match) {
+        // Save for later use
+        sessionStorage.setItem("codename", match.codename);
+        sessionStorage.setItem("department", "Cyber Intelligence"); // Customize if needed
+        sessionStorage.setItem("caseCount", 0); // Default
+        window.location.href = match.page;
+      } else {
+        errorBox.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
